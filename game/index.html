@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sky Courier — Coral Isles Mail Run: fly the seaplane Kestrel across six islands, through golden rings and mail drops, and land at Home Strip.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 18 L28 14 L28 18 L14 22 L8 28 L6 22 L2 20 Z' fill='%23e8442e'/%3E%3C/svg%3E">
+<title>Sky Courier — Coral Isles Mail Run</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0c1a28;
+    height: 100%;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #game {
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+    display: block;
+    background: #7ec8f2;
+    cursor: crosshair;
+    image-rendering: auto;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
