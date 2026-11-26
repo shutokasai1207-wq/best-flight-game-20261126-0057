@@ -2,7 +2,7 @@
 // Copies game/ and screenshots/ into the output directory and writes the
 // dossier with buildDossier from the kit's library (vendor/makefun-game.ts).
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-game.ts';
@@ -17,7 +17,6 @@ if (!existsSync(join(rootDir, 'screenshots'))) {
   throw new Error('screenshots/ is missing from the repository');
 }
 
-rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 cpSync(join(rootDir, 'game'), join(outDir, 'game'), { recursive: true });
 cpSync(join(rootDir, 'screenshots'), join(outDir, 'screenshots'), { recursive: true });
